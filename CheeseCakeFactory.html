@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The CheeseCakeFactoy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+</head>
+<style>
+/* Basic reset for margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, 
+#a3045e, 
+#c90857);
+}
+
+/* Header styling */
+#header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #f8d1fd; /* Add background color */
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Navbar styling */
+#nav-bar {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+
+/* Image styling */
+#header-img {
+    max-width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+
+/* Navbar links styling */
+.nav-links {
+    display: flex;
+    gap: 20px; /* Adjust spacing between links */
+    margin-left: auto; /* Push links to the right */
+}
+
+.nav-link {
+    text-decoration: none;
+    color: black; /* Link color */
+    padding: 10px 15px;
+    transition: background-color 0.3s;
+    border: 2px solid transparent; /* Transparent border initially */
+    font-family: courier;
+    font-size:18px;
+    font-weight:bold;
+}
+
+.nav-link:hover {
+    background-color: #c90857;
+    border-radius: 5px;
+    color:white;
+}
+
+/* Styling for h2 */
+h2 {
+    text-align: center;
+    font-family: 'Dancing Script', cursive;
+    color: white;
+    font-size: 32px; /* Corrected typo from '32x' */
+    margin-bottom: 20px; /* Add spacing below the h2 */
+}
+
+/* Styling for the container div */
+#first {
+    text-align: center; /* Center aligns h2 and input */
+    margin-top: 100px; /* Adjust for fixed navbar height */
+}
+
+/* Styling for the email input */
+#email {
+    padding: 10px;
+    width: 300px; /* Adjust width as needed */
+    margin-top: 10px;
+    font-size:16px;
+    font-family:tahoma;
+    border:1px solid white;
+    border-radius:50px; /* Add spacing above the input */
+}
+
+input[type="submit"] {
+    padding: 10px 10px;
+    margin-top: 10px; 
+    display: block; 
+    margin: 10px auto;
+    font-weight: bold;
+    font-size: 16px;
+    border:1px solid white;
+    border-radius:4px;
+    color:#515200;
+}
+
+/* Menu styling */
+#menu {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-template-rows: repeat(2, 1fr); /* Two rows */
+    gap: 20px; /* Spacing between items */
+    margin: 50px auto; /* Center the grid */
+    width: 80%;
+    background-color:#F5F5F5;
+    padding:20px; /* Adjust the width as needed */
+    opacity:85%;
+    border:1px solid #F5F5F5;
+    border-radius:4px;
+}
+
+/* Ensure all menu items are centered within their grid cell */
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu-item p {
+    font-size: 18px;
+    
+    background-color:#c90857;
+    border:1px solid #c90857;
+    border-radius:5px;
+    padding: 5px;
+    width: 200px;
+    color:white;
+}
+.menu-item p:hover {
+    background-color: #f8d1fd;
+    border:1px solid #f8d1fd;
+    border-radius: 5px;
+    color:black;
+}
+
+/* Footer styling */
+footer {
+    background-color: #f8d1fd;
+    text-align: center;
+    padding: 10px;
+    
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Media Query for smaller screens */
+@media (max-width: 720px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+    #email, button[type="submit"] {
+        width: 80%;
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; /* Adjust the gap between images as needed */
+}
+
+#homepic {
+    width: 400px;
+    height: 400px;
+    opacity: 90%;
+    border-radius:10px;
+}
+
+.side-image {
+    width: 200px; /* Adjust width of the side images */
+    height: 250px; /* Adjust height of the side images */
+    opacity: 90%;
+    border-radius:10px;
+}
+
+</style>
+<body>
+    <header id="header">
+        <img id="header-img" src="https://i.imgur.com/ya3CB3v.jpeg" alt="Header Image"></img>
+        <nav id="nav-bar">
+            <div class="nav-links">
+                <a class="nav-link" href="#menu">Menu</a>
+                <a class="nav-link" href="#recipe">Recipe</a>
+                <a class="nav-link" href="#copyright">Copyright</a>
+                </div>
+                </nav>
+                </header>
+            </div>
+        </nav>
+    </header>
+    <form id="form" action="https://www.freecodecamp.com/email-submit"><br/><br/><br/>
+     <div id="first">
+        <h2>Log in to enjoy your personalized Cheesecake Factory experience</h2>
+        <br/>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+        <br/><br/>
+        <input type="submit" id="submit" type="submit"></button>
+    </div>
+    <br/><br/>
+    <div class="image-container">
+    <img class="side-image" src="https://www.mybakingaddiction.com/wp-content/uploads/2022/08/plated-blueberry-cheesecake-700x1050.jpg" alt="Left Image">
+    <img id="homepic" src="https://tatyanaseverydayfood.com/wp-content/uploads/2020/12/White-Chocolate-Raspberry-Cheesecake-Recipe-3.jpg" alt="Main Image">
+    <img class="side-image" src="https://dinnerthendessert.com/wp-content/uploads/2022/07/Lemon-Cheesecake-28.jpg" alt="Right Image">
+</div>
+
+    <div class="section1">
+<section id="menu">
+    <div class="menu-item">
+        <img src="https://i.imgur.com/Cp2NlTm.png" height="100" width="100">
+        <p>Appetizers</p>
+    </div>
+    <div class="menu-item">
+        <img src="https://i.imgur.com/1R7WAbJ.png" height="100" width="100">
+        <p>Sandwitches</p>
+    </div>
+    <div class="menu-item">
+        <img src="https://i.imgur.com/HIirkF7.png" height="100" width="100">
+        <p>Cheesecakes & Specialty Desserts</p>
+    </div>
+    <div class="menu-item">
+        <img src="https://i.imgur.com/A5PKpSi.png" height="100" width="100">
+        <p>Ice Cream Delights</p>
+    </div>
+    <div class="menu-item">
+        <img src="https://i.imgur.com/GAwqsp6.png" height="100" width="100">
+        <p>Hot Drinks & Espresso</p>
+    </div>
+    <div class="menu-item">
+        <img src="https://i.imgur.com/EXOidRC.png" height="100" width="100">
+        <p>Frozen Drinks</p>
+    </div>
+    
+</section>
+
+    </div><br/><br/><br/><br/>
+     <section id="recipe">
+    <div class="section2">
+       <center><iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/6684w6x4w6s" frameborder="0" allowfullscreen></iframe>
+</center>
+        </div>
+    </form>
+    <br/><br/><br/>
+    <div id="copyright">
+     <footer id="footer">
+    <div class="footer-content">
+      <ul>
+        <li><a href="#">Privacy</a></li>
+        <li><a href="#">Terms</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <p>&copy; Copyright Stephano2024</p>
+    </div>
+  </footer>
+  </div>
+</body>
+</html>
